@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+
+  parameters {
+    string(defaultValue: "Hello World", name: 'MESSAGE', description: 'Enter a message to echo')
+  }
+
+  stages {
+    stage('Echo Message') {
+      steps {
+        script {
+          echo "The message is: ${params.MESSAGE}"
+        }
+      }
+    }
+  }
+}
