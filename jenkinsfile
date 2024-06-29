@@ -11,7 +11,7 @@ pipeline {
         script {
           echo "The message is: ${params.MESSAGE}"
         }
-      }
-    }
-  }
+      } // Ensure there is no hidden non-breaking space character here
+    }
+  }
 }
